@@ -1,0 +1,20 @@
+import random
+
+
+lett = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVNM1234567890!@#$%^&*_"
+
+quantity = int(input("How many passwords do you need: "))
+length = int(input("Enter password length: "))
+x= 1
+
+if length <8:
+    
+    print("Warning! \nPassword must be 8+ len") 
+else:
+    for p in range(quantity): 
+        password = f"password {x}: "
+        x += 1
+        for pp in range(length):
+            password += random.choice(lett)
+                        
+        print(password)
