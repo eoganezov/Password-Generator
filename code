@@ -1,20 +1,19 @@
 import random
-
-
+#choosing symbols for random password
 lett = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVNM1234567890!@#$%^&*_"
 
-quantity = int(input("How many passwords do you need: "))
-length = int(input("Enter password length: "))
+quantity = int(input("How many passwords do you need: ")) #creating input for quantity 
+length = int(input("Enter password length: ")) # lenght of password
 x= 1
 
-if length <8:
+if length <8: 
     
-    print("Warning! \nPassword must be 8+ len") 
+    print("Warning! \nPassword must be 8+ len") #creating condition that password must have 8+ characters
 else:
-    for p in range(quantity): 
-        password = f"password {x}: "
-        x += 1
-        for pp in range(length):
-            password += random.choice(lett)
+    for p in range(quantity): #creating loop for range in quatity of passpord(5th str)
+        password = f"password {x}: " #using x to mention number of password
+        x += 1 
+        for pp in range(length): #using range of length of pass(6 str)
+            password += random.choice(lett) #using random func to get random password from lett
                         
         print(password)
